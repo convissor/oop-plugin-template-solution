@@ -185,6 +185,9 @@ the `.pot`, `.po` and `.mo` files:
 
 == Changelog ==
 
+= 1.0.2 (2012-11-05) =
+* Explain why can't use PHPUnit's @expectedException functionality.
+
 = 1.0.1 (2012-11-05) =
 * Clarify instructions and descriptions.
 

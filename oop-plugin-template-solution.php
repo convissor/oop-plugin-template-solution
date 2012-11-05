@@ -7,7 +7,7 @@
  * object-oriented programming practices.
  *
  * Plugin URI: http://wordpress.org/extend/plugins/oop-plugin-template-solution/
- * Version: 1.0.1
+ * Version: 1.0.2
  *         (Remember to change the VERSION constant, below, as well!)
  * Author: Daniel Convissor
  * Author URI: http://www.analysisandsolutions.com/
@@ -49,7 +49,7 @@ class oop_plugin_template_solution {
 	/**
 	 * This plugin's version
 	 */
-	const VERSION = '1.0.1';
+	const VERSION = '1.0.2';
 
 	/**
 	 * This plugin's table name prefix

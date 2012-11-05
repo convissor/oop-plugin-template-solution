@@ -71,6 +71,11 @@ class LoginTest extends TestCase {
 	/**
 	 * How to account for expected errors and test wp_redirect() did what
 	 * is expected
+	 *
+	 * Can't use PHPUnit's expectedException / expectedExceptionMessage
+	 * functionality because test method execution ends when the error is
+	 * generated.  We need this test method to run to its end so it can check
+	 * the behavior after the error.
 	 */
 	public function test_redirect() {
 		$expected_error = 'Cannot modify header information';
