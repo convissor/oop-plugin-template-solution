@@ -3,11 +3,11 @@
 /**
  * Plugin Name: Object Oriented Plugin Template Solution
  *
- * Description: A well engineered template for creating new plugins using
+ * Description: A well engineered template for creating plugins using
  * object-oriented programming practices.
  *
  * Plugin URI: http://wordpress.org/extend/plugins/oop-plugin-template-solution/
- * Version: 1.0.0
+ * Version: 1.0.1
  *         (Remember to change the VERSION constant, below, as well!)
  * Author: Daniel Convissor
  * Author URI: http://www.analysisandsolutions.com/
@@ -49,7 +49,7 @@ class oop_plugin_template_solution {
 	/**
 	 * This plugin's version
 	 */
-	const VERSION = '1.0.0';
+	const VERSION = '1.0.1';
 
 	/**
 	 * This plugin's table name prefix

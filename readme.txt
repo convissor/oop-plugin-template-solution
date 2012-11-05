@@ -11,10 +11,10 @@ A well engineered template for creating plugins using object-oriented programmin
 
 == Description ==
 
-This gives authors of new plugins a leg up on creating a great, easy to
+Gives authors of new plugins a leg up on creating a great, easy to
 maintain plugin by providing a carefully designed plugin skeleton to build on.
 Authors of existing plugins can extract individual components and concepts
-and transplant them into their projects.
+for transplantation into their own projects.
 
 * Clean, object-oriented design
 * PHPUnit tests
@@ -53,7 +53,7 @@ there.
     adjust them as needed for your environment.  Replace the three mentions
     of "My Plugin" in the settings section with the name of your plugin.
 
-        # Settings...
+        # Settings -----
         # Plugin identifier / directory (hyphen separated).
         old_id=oop-plugin-template-solution
         new_id=my-plugin
@@ -65,12 +65,15 @@ there.
         # Plugin Name (space separated).
         old_name="Object Oriented Plugin Template Solution"
         new_name="My Plugin"
+        # --------------
 
 
-        # Now do the replacements...
+        # Copy and rename the files.
         cp -R $old_id $new_id
         cd $new_id
         mv $old_id.php $new_id.php
+
+        # Replace strings in the files.
         find . -type f -exec sed "s/$old_id/$new_id/g" -i {} \;
         find . -type f -exec sed "s/$old_class/$new_class/g" -i {} \;
         find . -type f -exec sed "s/$old_name/$new_name/g" -i {} \;
@@ -132,12 +135,16 @@ This framework uses PHPUnit, so standard PHPUnit file, class, and method
 naming practices apply.  Our framework requires that your test files and
 classes:
 
-* The only file each test script needs obtain is done by a `require_once`
-  call for `TestCase.php`.  That obtains the PHPUnit and other items needed.
+* Have a `require_once` call for `TestCase.php` at the top of the script.
+  That obtains the PHPUnit and other items needed.  It's the only file you
+  need to include.
 * Classes must extend `TestCase`
 * If you add a `setUpBeforeClass()` method, it must
   call `parent::setUpBeforeClass()`
 * If you add a `setUp()` method, it must call `parent::setUp()`
+* If you add a `tearDown()` method, it must call `parent::tearDown()`
+* If you add a `tearDownAfterClass()` method, it must
+  call `parent::tearDownAfterClass()`
 
 Take a look at the `TestLogin.php` script for examples of how to handle
 calls to `wp_mail()` (and translations of mail messages) and `wp_redirect()`,
@@ -177,6 +184,9 @@ the `.pot`, `.po` and `.mo` files:
 
 
 == Changelog ==
+
+= 1.0.1 (2012-11-05) =
+* Clarify instructions and descriptions.
 
 = 1.0.0 (2012-11-05) =
 * Initial release.
