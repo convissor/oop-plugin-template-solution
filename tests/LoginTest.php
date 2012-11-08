@@ -82,10 +82,7 @@ class LoginTest extends TestCase {
 		$this->expected_errors($expected_error);
 		self::$location_expected = wp_login_url() . '?action=retrievepassword';
 
-		// For demonstration purposes only.  In the real world, the logout
-		// and redirect would be triggred by some method in your plugin.
-		wp_logout();
-		wp_redirect(wp_login_url() . '?action=retrievepassword');
+		self::$o->force_retrieve_pw();
 
 		$this->assertTrue($this->were_expected_errors_found(),
 				"Expected error not found: '$expected_error'");

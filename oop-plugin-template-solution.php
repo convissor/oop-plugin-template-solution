@@ -7,7 +7,7 @@
  * object-oriented programming practices.
  *
  * Plugin URI: http://wordpress.org/extend/plugins/oop-plugin-template-solution/
- * Version: 1.0.2
+ * Version: 1.1.0
  *         (Remember to change the VERSION constant, below, as well!)
  * Author: Daniel Convissor
  * Author URI: http://www.analysisandsolutions.com/
@@ -49,7 +49,7 @@ class oop_plugin_template_solution {
 	/**
 	 * This plugin's version
 	 */
-	const VERSION = '1.0.2';
+	const VERSION = '1.1.0';
 
 	/**
 	 * This plugin's table name prefix
@@ -196,6 +196,16 @@ class oop_plugin_template_solution {
 	/*
 	 * ===== INTERNAL METHODS ====
 	 */
+
+	/**
+	 * Log the user out and send them to the lost password page
+	 *
+	 * This is here solely for demonstration of unit testing.
+	 */
+	protected function force_retrieve_pw() {
+		wp_logout();
+		wp_redirect(wp_login_url() . '?action=retrievepassword');
+	}
 
 	/**
 	 * Obtains the email addresses the notifications should go to
