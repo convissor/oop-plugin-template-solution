@@ -194,6 +194,9 @@ the `.pot`, `.po` and `.mo` files:
 
 == Changelog ==
 
+= 1.1.1 (2012-11-28) =
+* Tell folks where explanations can be found.
+
 = 1.1.0 (2012-11-08) =
 * Move the `wp_logout()` and `wp_redirect()` calls from direct calls in the
 test method to a method in the tested class instead.
