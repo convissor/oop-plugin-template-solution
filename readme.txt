@@ -29,16 +29,25 @@ See the FAQ section for more details about this plugin's features.
 
 Development of this plugin template happens on
 [GitHub](https://github.com/convissor/oop-plugin-template-solution).
-Releases are then squashed and pushed to WordPress'
-[Plugins SVN repository](http://plugins.svn.wordpress.org/oop-plugin-template-solution/).
-This division is necessary due having being chastised that "the Plugins SVN
-repository is a release system, not a development system."
-
 Please submit
 [bug and feature requests](https://github.com/convissor/oop-plugin-template-solution/issues),
 [pull requests](https://github.com/convissor/oop-plugin-template-solution/pulls),
 [wiki entries](https://github.com/convissor/oop-plugin-template-solution/wiki)
 there.
+Releases are then squashed and pushed to WordPress'
+[Plugins SVN repository](http://plugins.svn.wordpress.org/oop-plugin-template-solution/).
+This division is necessary due having being chastised that "the Plugins SVN
+repository is a release system, not a development system."
+
+= Explanations =
+
+If you want an explanation of how this "plugin" works, please see the
+"PHPUnit Tests for WordPress Plugins" series on my blog.
+
+* [Global Variables](http://www.analysisandsolutions.com/blog/html/writing-phpunit-tests-for-wordpress-plugins-global-variables.htm)
+* [wp_mail()](http://www.analysisandsolutions.com/blog/html/writing-phpunit-tests-for-wordpress-plugins-wp-mail.htm)
+* [wp_redirect() and Expected PHP Errors](http://www.analysisandsolutions.com/blog/html/writing-phpunit-tests-for-wordpress-plugins-wp-redirect-and-continuing-after-php-errors.htm)
+* [Auto-increment ID Records](http://www.analysisandsolutions.com/blog/html/writing-phpunit-tests-for-wordpress-plugins-auto-increment-id-records.htm)
 
 
 == Installation ==
