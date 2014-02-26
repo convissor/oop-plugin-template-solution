@@ -172,11 +172,17 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 	}
 
 	/**
-	 * Removes the tables and settings when the plugin is deactivated
-	 * if the deactivate_deletes_data option is turned on
+	 * Scaffolding function to execute functionality when the plugin is deactivated
 	 * @return void
 	 */
 	public function deactivate() {
+	}
+
+	/**
+	 * Removes the tables and settings when the plugin is uninstalled
+	 * @return void
+	 */
+	public function uninstall() {
 		global $wpdb;
 
 		$prior_error_setting = $wpdb->show_errors;
@@ -202,7 +208,7 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 				WHERE meta_key LIKE '$package_id%'");
 	}
 
-	/*
+  /*
 	 * ===== ADMIN USER INTERFACE =====
 	 */
 

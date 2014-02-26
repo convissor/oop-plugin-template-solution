@@ -140,9 +140,11 @@ class oop_plugin_template_solution {
 			add_filter($plugin_action_links, array(&$admin, 'plugin_action_links'));
 
 			register_activation_hook(__FILE__, array(&$admin, 'activate'));
+			register_deactivation_hook(__FILE__, array(&$admin, 'deactivate'));
 			if ($this->options['deactivate_deletes_data']) {
-				register_deactivation_hook(__FILE__, array(&$admin, 'deactivate'));
+			  register_deactivation_hook(__FILE__, array(&$admin, 'uninstall'));
 			}
+		  register_uninstall_hook(__FILE__, array(&$admin, 'uninstall'));
 		}
 	}
 
