@@ -194,6 +194,9 @@ the `.pot`, `.po` and `.mo` files:
 
 == Changelog ==
 
+= 1.1.2 (2014-08-30) =
+* Added readme.md
+
 = 1.1.1 (2012-11-28) =
 * Tell folks where explanations can be found.
 
