@@ -1,4 +1,4 @@
-###Object Oriented Plugin Template Solution
+### Object Oriented Plugin Template Solution
 
 Contributors: convissor, codesman
 
@@ -14,7 +14,7 @@ Stable tag: trunk
 
 A well engineered template for creating plugins using object-oriented programming practices. Uses Settings API, multisite, i18n, PHPUnit tests.
 
-##Description
+## Description
 
 Gives authors of new plugins a leg up on creating a great, easy to maintain plugin by providing a carefully designed plugin skeleton to build on.
 
@@ -44,7 +44,7 @@ Releases are then squashed and pushed to WordPress'
 This division is necessary due having being chastised that "the Plugins SVN
 repository is a release system, not a development system."
 
-##Explanations
+## Explanations
 
 If you want an explanation of how this "plugin" works, please see the
 "PHPUnit Tests for WordPress Plugins" series on my blog.
@@ -54,7 +54,7 @@ If you want an explanation of how this "plugin" works, please see the
 * [wp_redirect() and Expected PHP Errors](http://www.analysisandsolutions.com/blog/html/writing-phpunit-tests-for-wordpress-plugins-wp-redirect-and-continuing-after-php-errors.htm)
 * [Auto-increment ID Records](http://www.analysisandsolutions.com/blog/html/writing-phpunit-tests-for-wordpress-plugins-auto-increment-id-records.htm)
 
-##Installation
+## Installation
 
 1. Download the zip file from WordPress' plugin
     site: `http://wordpress.org/extend/plugins/oop-plugin-template-solution/`
@@ -97,7 +97,7 @@ If you want an explanation of how this "plugin" works, please see the
     * Regular sites:  Plugins
     * Sites using multisite networks:  My Sites | Network Admin | Plugins
 
-##Removal
+## Removal
 
 1. This plugin offers the ability to remove all of this plugin's settings from your database.  Go to WordPress' "Plugins" admin interface and click  click the "Yes, delete the damn data" button and save the form.
 
@@ -106,16 +106,16 @@ If you want an explanation of how this "plugin" works, please see the
 1. Remove the plugins directory from the server
 
 
-##Frequently Asked Questions
+## Frequently Asked Questions
 
-###Multisite Networks
+### Multisite Networks
 
 This plugin is coded to be installed in either a regular, single WordPress installation or as a network plugin for multisite installations.  So, by default, multisite networks can only activate this plugin via the Network Admin panel.
 
 If you want your plugin to be configurable for each site in a multisite network, follow the instructions in the docblock at the top of `admin.php`.
 
 
-###Settings API
+### Settings API
 
 We add some abstraction around WordPress' [Settings API](http://codex.wordpress.org/Settings_API).
 
@@ -126,7 +126,7 @@ All you need to do is add some elements to two arrays and maybe create a section
 1. Read the docblock at the top of the file
 
 
-###Unit Tests
+### Unit Tests
 
 This framework uses PHPUnit, so standard PHPUnit file, class, and method naming practices apply.  Our framework requires that your test files and classes:
 
@@ -148,7 +148,7 @@ To execute the tests, install and activate the plugin, then use a shell to `cd` 
 
 While it is possible to test plugins using [WordPress' Automated Testing](http://codex.wordpress.org/Automated_Testing) PHPUnit framework, it is a complex system, is another dependency, and runs in its own environment. The benefit of using my plugin's PHPUnit is that it ships with the plugin and executes in the users actual WordPress installation.  This means any end user can easily test how the plugin interacts with their site.
 
-##Translations
+## Translations
 
 To produce the machine readable translations used by WordPress' gettext implementation, use the scripts I made for generating all of the `.pot`, `.po` and `.mo` files:
 
@@ -165,19 +165,19 @@ To produce the machine readable translations used by WordPress' gettext implemen
     ./makemos.sh
 
 
-##Changelog
+## Changelog
 
-###1.1.1 (2012-11-28)
+### 1.1.1 (2012-11-28)
 * Tell folks where explanations can be found.
 
-###1.1.0 (2012-11-08)
+### 1.1.0 (2012-11-08)
 * Move the `wp_logout()` and `wp_redirect()` calls from direct calls in the test method to a method in the tested class instead.
 
-###1.0.2 (2012-11-05)
+### 1.0.2 (2012-11-05)
 * Explain why can't use PHPUnit's @expectedException functionality.
 
-###1.0.1 (2012-11-05)
+### 1.0.1 (2012-11-05)
 * Clarify instructions and descriptions.
 
-###1.0.0 (2012-11-05)
+### 1.0.0 (2012-11-05)
 * Initial release.
