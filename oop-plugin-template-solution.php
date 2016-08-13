@@ -282,10 +282,10 @@ class oop_plugin_template_solution {
 		$to = $this->sanitize_whitespace($this->get_admin_email());
 		$blog = get_option('blogname');
 
-		$subject = sprintf(__("LOGIN TO %s", self::ID), $blog);
+		$subject = sprintf(__("LOGIN TO %s", 'oop-plugin-template-solution'), $blog);
 		$subject = $this->sanitize_whitespace($subject);
 
-		$message = sprintf(__("%s just logged in to %s.", self::ID),
+		$message = sprintf(__("%s just logged in to %s.", 'oop-plugin-template-solution'),
 				$user_name, $blog) . "\n";
 
 		return wp_mail($to, $subject, $message);

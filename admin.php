@@ -132,7 +132,7 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 		global $wpdb;
 
 		if (is_multisite() && !is_network_admin()) {
-			die($this->hsc_utf8(sprintf(__("%s must be activated via the Network Admin interface when WordPress is in multistie network mode.", self::ID), self::NAME)));
+			die($this->hsc_utf8(sprintf(__("%s must be activated via the Network Admin interface when WordPress is in multistie network mode.", 'oop-plugin-template-solution'), self::NAME)));
 		}
 
 		/*
@@ -228,11 +228,11 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 	protected function set_sections() {
 		$this->sections = array(
 			'login' => array(
-				'title' => __("Login Policies", self::ID),
+				'title' => __("Login Policies", 'oop-plugin-template-solution'),
 				'callback' => 'section_login',
 			),
 			'misc' => array(
-				'title' => __("Miscellaneous Policies", self::ID),
+				'title' => __("Miscellaneous Policies", 'oop-plugin-template-solution'),
 				'callback' => 'section_blank',
 			),
 		);
@@ -267,31 +267,31 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 		$this->fields = array(
 			'track_logins' => array(
 				'section' => 'login',
-				'label' => __("Track Logins", self::ID),
-				'text' => __("Should the time of each user's login be stored?", self::ID),
+				'label' => __("Track Logins", 'oop-plugin-template-solution'),
+				'text' => __("Should the time of each user's login be stored?", 'oop-plugin-template-solution'),
 				'type' => 'bool',
-				'bool0' => __("No, don't track logins.", self::ID),
-				'bool1' => __("Yes, track logins.", self::ID),
+				'bool0' => __("No, don't track logins.", 'oop-plugin-template-solution'),
+				'bool1' => __("Yes, track logins.", 'oop-plugin-template-solution'),
 			),
 
 			'deactivate_deletes_data' => array(
 				'section' => 'misc',
-				'label' => __("Deactivation", self::ID),
-				'text' => __("Should deactivating the plugin remove all of the plugin's data and settings?", self::ID),
+				'label' => __("Deactivation", 'oop-plugin-template-solution'),
+				'text' => __("Should deactivating the plugin remove all of the plugin's data and settings?", 'oop-plugin-template-solution'),
 				'type' => 'bool',
-				'bool0' => __("No, preserve the data for future use.", self::ID),
-				'bool1' => __("Yes, delete the damn data.", self::ID),
+				'bool0' => __("No, preserve the data for future use.", 'oop-plugin-template-solution'),
+				'bool1' => __("Yes, delete the damn data.", 'oop-plugin-template-solution'),
 			),
 			'example_int' => array(
 				'section' => 'misc',
-				'label' => __("Integer", self::ID),
-				'text' => __("An example for storing an integer value.", self::ID),
+				'label' => __("Integer", 'oop-plugin-template-solution'),
+				'text' => __("An example for storing an integer value.", 'oop-plugin-template-solution'),
 				'type' => 'int',
 			),
 			'example_string' => array(
 				'section' => 'misc',
-				'label' => __("String", self::ID),
-				'text' => __("See how to set a string value.", self::ID),
+				'label' => __("String", 'oop-plugin-template-solution'),
+				'text' => __("See how to set a string value.", 'oop-plugin-template-solution'),
 				'type' => 'string',
 			),
 		);
@@ -400,7 +400,7 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 	 */
 	public function section_login() {
 		echo '<p>';
-		echo $this->hsc_utf8(__("An explanation of this section...", self::ID));
+		echo $this->hsc_utf8(__("An explanation of this section...", 'oop-plugin-template-solution'));
 		echo '</p>';
 	}
 
@@ -461,7 +461,7 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 			. '[' . $this->hsc_utf8($name) . ']"'
 			. ' value="' . $this->hsc_utf8($this->options[$name]) . '" /> ';
 		echo $this->hsc_utf8($this->fields[$name]['text']
-				. ' ' . __('Default:', self::ID) . ' '
+				. ' ' . __('Default:', 'oop-plugin-template-solution') . ' '
 				. $this->options_default[$name] . '.');
 	}
 
@@ -476,7 +476,7 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 			. ' value="' . $this->hsc_utf8($this->options[$name]) . '" /> ';
 		echo '<br />';
 		echo $this->hsc_utf8($this->fields[$name]['text']
-				. ' ' . __('Default:', self::ID) . ' '
+				. ' ' . __('Default:', 'oop-plugin-template-solution') . ' '
 				. $this->options_default[$name] . '.');
 	}
 
@@ -500,8 +500,8 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 			return $out;
 		}
 
-		$gt_format = __("must be >= '%s',", self::ID);
-		$default = __("so we used the default value instead.", self::ID);
+		$gt_format = __("must be >= '%s',", 'oop-plugin-template-solution');
+		$default = __("so we used the default value instead.", 'oop-plugin-template-solution');
 
 		// Dynamically validate each field using the info in $fields.
 		foreach ($this->fields as $name => $field) {
@@ -534,7 +534,7 @@ class oop_plugin_template_solution_admin extends oop_plugin_template_solution {
 						add_settings_error($this->option_name,
 								$this->hsc_utf8($name),
 								$this->hsc_utf8("'" . $field['label'] . "' "
-										. __("must be an integer,", self::ID)
+										. __("must be an integer,", 'oop-plugin-template-solution')
 										. ' ' . $default));
 						continue 2;
 					}
