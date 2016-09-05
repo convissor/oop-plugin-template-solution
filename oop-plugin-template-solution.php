@@ -313,7 +313,7 @@ class oop_plugin_template_solution {
 
 	/**
 	 * Replaces the default option values with those stored in the database
-	 * @uses login_security_solution::$options  to hold the data
+	 * @uses oop_plugin_template_solution::$options  to hold the data
 	 */
 	protected function set_options() {
 		if (is_multisite()) {
